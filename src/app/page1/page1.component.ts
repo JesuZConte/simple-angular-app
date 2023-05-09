@@ -11,7 +11,7 @@ export class Page1Component implements OnInit {
   pageName = 'Page 1';
   books?: Array<Book>;
 
-  constructor(public dataService: DataService) {
+  constructor(private dataService: DataService) {
   }
 
   ngOnInit() {
