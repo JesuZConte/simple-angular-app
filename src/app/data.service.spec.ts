@@ -15,7 +15,7 @@ describe('DataService', () => {
     expect(service).toBeTruthy();
   });
 
-  fit('should add book and increase the size of the books array', () => {
+  it('should add book and increase the size of the books array', () => {
     const book = new Book();
     const service: DataService = TestBed.get(DataService);
 
