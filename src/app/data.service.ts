@@ -27,4 +27,8 @@ export class DataService {
     book3.price = 8.99;
     this.books.push(book3);
   }
+
+  addBook(book: Book) {
+    this.books.push(book);
+  }
 }

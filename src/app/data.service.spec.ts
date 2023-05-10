@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { DataService } from './data.service';
+import {Book} from "./model/Book";
 
 describe('DataService', () => {
   let service: DataService;
@@ -13,4 +14,13 @@ describe('DataService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  fit('should add book and increase the size of the books array', () => {
+    const book = new Book();
+    const service: DataService = TestBed.get(DataService);
+
+    service.addBook(book);
+
+    expect(service.books.length).toEqual(4);
+  })
 });
